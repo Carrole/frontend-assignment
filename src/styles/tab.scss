@@ -1,0 +1,32 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  height: 50px;
+  background: #f4b4b4;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* 파이어폭스에서 스크롤바 숨김 */
+  -ms-overflow-style: none; /* IE/Edge에서 스크롤바 숨김 */
+
+  &::-webkit-scrollbar {
+    display: none; /* 크롬/사파리에서 스크롤바 숨김 */
+  }
+
+  scroll-behavior: smooth; /* ✅ 스크롤을 부드럽게 */
+  justify-content: flex-start; /* ✅ 탭을 왼쪽 정렬 */
+}
+
+.tab {
+  margin: auto;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: black;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  flex-shrink: 0; /* 축소되지 않도록 설정 */
+
+  &.active {
+    color: white;
+  }
+}
