@@ -8,6 +8,8 @@ import {
   HeaderTabMenu,
 } from '@/constants/HeaderTabMenu';
 import { Tabs } from '@/components/common/Tabs';
+import { useRef } from 'react';
+import { TopButton } from '@/components/common/TopButton';
 
 export default function SwipeableLayout({
   children,
@@ -16,6 +18,7 @@ export default function SwipeableLayout({
 }>) {
   const pathname = usePathname();
   const router = useRouter();
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const currentTab =
     headerTabList.find((tab) => `/${tab.key}` === pathname) || headerTabList[0];
@@ -35,8 +38,9 @@ export default function SwipeableLayout({
   return (
     <>
       <Tabs tabList={headerTabList} activeTab={currentTab} />
-      <main {...swipeHandlers} className="content">
+      <main {...swipeHandlers} className="content" ref={scrollContainerRef}>
         {children}
+        <TopButton scrollContainerRef={scrollContainerRef} />
       </main>
     </>
   );
