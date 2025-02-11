@@ -1,3 +1,14 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
-  return <div />;
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace('/chart');
+  }, [router]);
+
+  return null;
 }
