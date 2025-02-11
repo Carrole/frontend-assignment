@@ -1,7 +1,13 @@
+import { Carousel } from '@/components/common/Carousel';
+import { CarouselData } from '@/constants/carouselData';
+import { InfiniteScrollList } from '@/components/contentList/InfiniteScrollList';
+
 export default function WhookPage() {
   return (
     <div>
-      <h1>Whook 페이지</h1>
+      <Carousel items={CarouselData} />
+      <h5 className="font-large">Whook 페이지</h5>
+      <InfiniteScrollList />
     </div>
   );
 }
