@@ -1,7 +1,11 @@
+import { Carousel } from '@/components/common/Carousel';
+import { InfiniteScrollList } from '@/components/ContentList/InfiniteScrollList';
+import { CarouselData } from '@/constants/carouselData';
+
 export default function ChartPage() {
   return (
     <div>
-      <h1>차트 페이지</h1>
+      <Carousel items={CarouselData} />
     </div>
   );
 }

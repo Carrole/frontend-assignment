@@ -1,0 +1,84 @@
+.carousel-content {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 진행 중 여부 - 왼쪽 상단 */
+.carousel-status {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+}
+
+.carousel-status.active {
+  background-color: #ea66a6;
+}
+
+.carousel-status.inactive {
+  background-color: #aaa;
+}
+
+/* 이미지 영역 (7:3 비율 유지) */
+.carousel-image-wrapper {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+/* 텍스트 영역 */
+.carousel-text {
+  padding: 12px;
+}
+
+.carousel-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.carousel-period {
+  font-size: 13px;
+  color: #666;
+  text-align: right;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: #ea66a6;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

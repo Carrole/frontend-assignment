@@ -26,6 +26,7 @@ export default function SwipeableLayout({
 
   // ✅ 스와이프 네비게이션 적용 (`headerTabMenuArr` 기준)
   const { swipeHandlers } = useSwipeNavigation(
+    'swipeableLayout',
     headerTabMenuArr,
     currentTab.key,
     handleTabChange
