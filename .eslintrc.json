@@ -23,6 +23,7 @@
     "prettier/prettier": ["error"],
     "react/react-in-jsx-scope": "off", // Next.js에서는 필요 없는 옵션
     "import/prefer-default-export": "off", // export default를 사용하는 것이 사용 위치를 찾기 더 번거롭기 때문에 Off
-    "react/function-component-definition": "off" // 함수형 컴포넌트를 정의할 때 function 키워드를 사용하지 않아도 되도록 Off
+    "react/function-component-definition": "off", // 함수형 컴포넌트를 정의할 때 function 키워드를 사용하지 않아도 되도록 Off
+    "react/jsx-props-no-spreading": "off" // 편리한 react-swipeable 라이브러리 사용을 위해 룰 off
   }
 }
