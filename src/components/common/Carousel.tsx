@@ -23,7 +23,7 @@ export const Carousel = ({
     <div {...swipeHandlers}>
       <div className="carousel-content">
         <span
-          className={`carousel-status ${items[currentIndex].isActive ? 'active' : 'inactive'}`}
+          className={`font-medium carousel-status ${items[currentIndex].isActive ? 'active' : 'inactive'}`}
         >
           {items[currentIndex].isActive ? '진행 중' : '완료'}
         </span>
@@ -39,10 +39,10 @@ export const Carousel = ({
         </div>
 
         <div className="carousel-text">
-          <div className="carousel-title ellipsis">
-            {items[currentIndex].title}
+          <div className="font-large ellipsis">{items[currentIndex].title}</div>
+          <div className="font-medium carousel-period">
+            {items[currentIndex].period}
           </div>
-          <div className="carousel-period">{items[currentIndex].period}</div>
         </div>
       </div>
 
